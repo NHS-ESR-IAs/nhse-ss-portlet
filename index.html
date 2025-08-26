@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
+  <!-- 
 ===================================================================================================================
 🗂️ Microsite Page Index — Navigation Targets
 ===================================================================================================================
@@ -18,1050 +18,3015 @@ Each nav-link uses `onclick="showPage('ID')"` to display the corresponding page 
 Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learning Information Hub</title>
-  <!-- Bootstrap 5.3.6 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom Stylesheet -->
-  <link href="style.css" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ESR Self Service Hub</title>
+    <!-- Bootstrap 5.3.6 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom Stylesheet -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<body>
-  <!-- ================================= -->
-  <!-- ====== HEADER & NAVIGATION ====== -->
-  <!-- ================================= -->
-  <header class="nhs-header">
-    <div class="logo-bar d-flex justify-content-between align-items-center px-3 py-2">
-      <!-- NHS + ESR Logos -->
-      <div class="logo-container d-flex align-items-center gap-2">
-        <img src="https://assets.codepen.io/8889025/ESR_Logo.jpg" alt="ESR Logo" class="logo esr" />
-        <img src="https://assets.codepen.io/8889025/NHS_Logo.svg" alt="NHS Logo" class="logo nhs" />
+  <body>
+    <!-- ================================= -->
+    <!-- ====== HEADER & NAVIGATION ====== -->
+    <!-- ================================= -->
+    <header class="nhs-header">
+      <div
+        class="logo-bar d-flex justify-content-between align-items-center px-3 py-2"
+      >
+        <!-- NHS + ESR Logos -->
+        <div class="logo-container d-flex align-items-center gap-2">
+          <img
+            src="https://assets.codepen.io/8889025/ESR_Logo.jpg"
+            alt="ESR Logo"
+            class="logo esr"
+          />
+          <img
+            src="https://assets.codepen.io/8889025/NHS_Logo.svg"
+            alt="NHS Logo"
+            class="logo nhs"
+          />
+        </div>
+        <!-- Site Title -->
+        <div class="center-heading text-center">
+          <h1 class="mb-0">ESR Self Service</h1>
+        </div>
       </div>
-      <!-- Site Title -->
-      <div class="center-heading text-center">
-        <h1 class="mb-0">Learning Information Hub</h1>
-      </div>
-    </div>
-    <!-- Hero Banner -->
-    <div class="banner-wrapper text-center position-relative">
-      <img src="https://assets.codepen.io/8889025/LEA_Banner3.png" alt="Welcome Hub Banner" class="Banner_image w-100" />
-      <div class="banner-text-overlay">
-        <h1>Lady Elizabeth Ann NHS Trust</h1>
-      </div>
-    </div>
+      <!-- ================================= -->
+      <!-- ====== MAIN NAVIGATION BAR ====== -->
+      <!-- ================================= -->
+      <nav class="navbar navbar-expand-lg mt-3">
+        <div class="container">
+          <!-- Button for toggling the menu on mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu container -->
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+              <!-- ==== ADD A SINGLE SECTION ==== -->
+              <!-- To add a new section (simple link), copy and update one of the lines below -->
+              <li class="nav-item">
+                <a class="nav-link" onclick="showPage('home')">Home</a>
+              </li>
+              <!-- ==== ADD A DROPDOWN MENU ==== -->
+              <!-- To create a dropdown menu, use this structure -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Employee Self Service</a
+                >
+                <ul class="dropdown-menu">
+                  <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
+                  <!-- Each dropdown item below links to a page -->
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('ESS_LP')"
+                      >Employee Self Service</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS3')"
+                      >How To Change My Bank Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS4')"
+                      >How To Edit or Delete Annual Leave</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS5')"
+                      >How To Request Flexible Working</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS1')"
+                      >How To Update My Equality and Diversity Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS2')"
+                      >How To Update My Personal Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS6')"
+                      >How To View My Employment Information</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS7')"
+                      >How To View My Payslip and P60</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('SS_ESS8')"
+                      >How To View My Total Reward Statement</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- ==== END DROPDOWN MENU ==== -->
+              <!-- ==== ADD A DROPDOWN MENU ==== -->
+              <!-- To create a dropdown menu, use this structure -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Manager Self Service</a
+                >
+                <ul class="dropdown-menu">
+                  <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
+                  <!-- Each dropdown item below links to a page -->
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS_LP')"
+                      >Manager Self Service</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS11')"
+                      >Overview of Manager Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS1')"
+                      >How To Approve Annual Leave Requests</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS2')"
+                      >How To Change a Member of Staff's Hours</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS3')"
+                      >How To Change a Member of Staff's Supervisor</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS4')"
+                      >How To Enter Annual Leave on Employees Behalf</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS5')"
+                      >How To Enter Authorised Unpaid Absence</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS6')"
+                      >How To Enter Sickness Absence</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS7')"
+                      >How To Enter Unauthorised Absence</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS8')"
+                      >How To Extend a Fixed Term Contract</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS9')"
+                      >How To Input a Career Break</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS10')"
+                      >How To Input a Pay Progression Meeting</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS12')"
+                      >How To Respond to Flexible Working Request</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS13')"
+                      >How To Terminate a Member of Staff</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS14')"
+                      >How To Update a Staff Members Office Location</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS15')"
+                      >How To Update a Staff Member's Working Pattern</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS16')"
+                      >How To Update Staff Personal Information</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS17')"
+                      >How To View My Organisation Chart</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS18')"
+                      >How To View My Teams Absence</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS19')"
+                      >How To View My Teams Training Compliance</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="showPage('MSS20')"
+                      >How to Log Disability Leave in ESR</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- ==== END DROPDOWN MENU ==== -->
+              <details class="mobile-toolbar d-sm-none mt-3">
+                <summary class="btn btn-outline-secondary w-100">
+                  Search & Settings
+                </summary>
+                <div class="p-2">
+                  <input
+                    type="text"
+                    id="searchInputDesktop"
+                    class="form-control mb-2"
+                    placeholder="Search the site"
+                    onkeyup="searchPages(this.value)"
+                  />
+                  <select
+                    id="themeSelector"
+                    class="form-select form-select-sm mb-2 theme-selector"
+                    aria-label="Choose Theme"
+                  >
+                    <option value="blue">NHS Blue</option>
+                    <option value="green">NHS Green</option>
+                    <option value="grey">NHS Grey</option>
+                    <option value="pink">NHS Pink</option>
+                    <option value="purple">NHS Purple</option>
+                    <option value="red">NHS Red</option>
+                    <option value="yellow">NHS Yellow</option>
+                    <option value="calm">Light Grey</option>
+                    <option value="contrast">High Contrast</option>
+                  </select>
+                  <div class="btn-group btn-group-sm w-100 mb-2" role="group">
+                    <button
+                      onclick="setTextSize('scale-small')"
+                      class="btn btn-outline-secondary"
+                    >
+                      A-
+                    </button>
+                    <button
+                      onclick="setTextSize('scale-medium')"
+                      class="btn btn-outline-secondary"
+                    >
+                      A
+                    </button>
+                    <button
+                      onclick="setTextSize('scale-large')"
+                      class="btn btn-outline-secondary"
+                    >
+                      A+
+                    </button>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-outline-primary w-100 toggle-dark"
+                  >
+                    Dark Mode
+                  </button>
+                </div>
+              </details>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <!-- ================================= -->
-    <!-- ====== MAIN NAVIGATION BAR ====== -->
-    <!-- ================================= -->
-    <nav class="navbar navbar-expand-lg mt-3">
+      <!-- ======================================== -->
+      <!-- ====== TOOLBAR: SEARCH + SETTINGS ====== -->
+      <!-- ======================================== -->
+      <!-- Collapsible Toolbar -->
+
+      <div class="container mt-3 d-none d-sm-block">
+        <div class="row align-items-center g-2">
+          <!-- Site Search -->
+          <div class="col">
+            <input
+              type="text"
+              id="searchInputMobile"
+              class="form-control"
+              placeholder="Search the site"
+              onkeyup="searchPages(this.value)"
+            />
+          </div>
+          <!-- Theme & Accessibility Controls -->
+          <div class="col-auto">
+            <div class="control-toolbar d-flex flex-wrap gap-2 p-2 rounded">
+              <!-- Theme Selector -->
+              <select
+                id="themeSelector"
+                class="form-select form-select-sm w-auto theme-selector"
+                aria-label="Choose Theme"
+              >
+                <option value="blue">NHS Blue</option>
+                <option value="green">NHS Green</option>
+                <option value="grey">NHS Grey</option>
+                <option value="pink">NHS Pink</option>
+                <option value="purple">Purple</option>
+                <option value="red">NHS Red</option>
+                <option value="yellow">NHS Yellow</option>
+                <option value="calm">Light Grey</option>
+                <option value="contrast">High Contrast</option>
+              </select>
+              <!-- Text Size Buttons -->
+              <div
+                class="btn-group btn-group-sm"
+                role="group"
+                aria-label="Text Size"
+              >
+                <button
+                  onclick="setTextSize('scale-small')"
+                  class="btn btn-outline-secondary"
+                >
+                  A-
+                </button>
+                <button
+                  onclick="setTextSize('scale-medium')"
+                  class="btn btn-outline-secondary"
+                >
+                  A
+                </button>
+                <button
+                  onclick="setTextSize('scale-large')"
+                  class="btn btn-outline-secondary"
+                >
+                  A+
+                </button>
+                <button
+                  onclick="setTextSize('scale-xlarge')"
+                  class="btn btn-outline-secondary"
+                >
+                  A++
+                </button>
+              </div>
+              <!-- Dark Mode Toggle -->
+              <button class="btn btn-sm btn-outline-primary toggle-dark">
+                Dark Mode
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- =============================== -->
+    <!-- ====== HOME PAGE SECTION ====== -->
+    <!-- =============================== -->
+    <div id="home" class="page active">
       <div class="container">
-        <!-- Button for toggling the menu on mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="row">
+          <!-- Sidebar Gradient Title -->
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">ESR Self Service Hub</h3>
+          </div>
+          <!-- Main Welcome Text -->
+          <div class="col-md-8">
+            <h4>ESR Self Service Hub</h4>
+            <p>
+              Welcome to the NHS Electronic Staff Record (ESR) system. ESR is an
+              integrated workforce management solution developed by the NHS for
+              the NHS. It's designed to support the entire employee lifecycle,
+              from hiring to retirement, and is currently used by 99% of NHS
+              Organisations.
+            </p>
 
-        <!-- Menu container -->
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav mx-auto">
+            <p>
+              The system allows you to interact with it anytime, from any
+              device, at any location, empowering you to take ownership of your
+              data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- ==== ADD A SINGLE SECTION ==== -->
-            <!-- To add a new section (simple link), copy and update one of the lines below -->
-            <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="showPage('guides')">Guides</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="showPage('faqs')">FAQs</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="showPage('SUP')">Support Request</a></li>
+    <!-- =============================== -->
+    <!-- === EMPLOYEE SELF SERVICE ==== -->
+    <!-- =============================== -->
+    <div id="ESS_LP" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Employee Self Service</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>ESR Employee Self-Service</h4>
+            <p>
+              Employee self-service (ESS) puts you in control of your employment
+              records and can can be accessed anywhere from a PC, tablet or
+              mobile device. You can also download the ESR app.
+            </p>
+            <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('ESS_LP')">Employee Self Service</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS3')">How To Change My Bank Details</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS4')">How To Edit or Delete Annual Leave</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS5')">How To Request Flexible Working</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS1')">How To Update My Equality and Diversity Details</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS2')">How To Update My Personal Details</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS6')">How To View My Employment Information</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS7')">How To View My Payslip and P60</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SS_ESS8')">How To View My Total Reward Statement</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- ==== ADD A DROPDOWN MENU ==== -->
-            <!-- To create a dropdown menu, use this structure -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" onclick="showPage('CC')">Catalogue</a>
-              <ul class="dropdown-menu">
+    <!-- =============================== -->
+    <!-- === CHANGE BANK DETAILS ======= -->
+    <!-- =============================== -->
+    <div id="SS_ESS3" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Change My Bank Details</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Change My Bank Details</h4>
+          <h5><b></b></h5>
+          <h5>All Employees can change their bank details through ESR.</h5>
+          </div>
+        </div>
+        <!-- Step 1 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 1: Log into ESR</h5>
+      <p>Once you're logged in, the <strong>Employee Dashboard</strong> will appear by default.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS9.png" alt="ESR Dashboard Screenshot" class="img-fluid" />
+    </div>
+  </div>
 
-                <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
-                <!-- Each dropdown item below links to a page -->
-                <li><a class="dropdown-item" onclick="showPage('SaMT')">Statutory and Mandatory Training</a></li>
+  <!-- Step 2 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Navigate to 'My Pay and Rewards'</h5>
+      <p>Click the <strong>'Bank Account'</strong> button in the <strong>My Pay and Rewards</strong> section on the left-hand menu.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS10.png" alt="Bank Account Button Screenshot" class="img-fluid" />
+    </div>
+  </div>
 
-                <!-- ==== ADD A SUBMENU ==== -->
-                <!-- To add a submenu (nested within dropdown), use this structure -->
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item submenu-toggle" href="#" onclick="showPage('NSMT')">Non Statutory and Mandatory Training</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="showPage('NSaMT1')">eLearning Modules</a></li>
-                    <li><a class="dropdown-item" onclick="showPage('NSaMT2')">Workshops</a></li>
-                    <li><a class="dropdown-item" onclick="showPage('NSaMT3')">Coaching Sessions</a></li>
-                  </ul>
+  <!-- Step 3 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Review Current Details</h5>
+      <p>Clicking on <strong>'Details'</strong> will display the bank account currently linked to your salary payments.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS11.png" alt="Bank Details Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Update and Submit</h5>
+      <p>Click <strong>'Update'</strong> to enter your new bank details.</p>
+      <p>Once you're done, click <strong>'Submit'</strong>—your changes will be applied immediately.</p>
+      <p>Need more info? You can find NHS England’s policy guidance <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === EDIT ANNUAL LEAVE ========= -->
+    <!-- =============================== -->
+    <div id="SS_ESS4" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Edit or Delete Annual Leave</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Edit or Delete Annual Leave</h4>
+          <h5><b>Requesting Annual Leave</b></h5>
+          <h5>All Employees should keep Annual Leave requests up-to-date through ESR.</h5>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>How to View or Update Your Absence Calendar</h4>
+      <p>Once you're logged into ESR, the <strong>Employee Dashboard</strong> will appear by default.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS12.png" alt="ESR Dashboard Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Your Absence Calendar</h5>
+      <p>Click <strong>'View My Absence Calendar'</strong> in the <strong>My Annual Leave</strong> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS13.png" alt="Absence Calendar Button Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: View Absence Summary</h5>
+      <p>Click <strong>'Absence Summary'</strong> in the top right corner to see your leave overview.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS14.png" alt="Absence Summary Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Update or Delete Absences</h5>
+      <p>Select <strong>'Update'</strong> to amend an absence, or <strong>'Delete'</strong> to remove one.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS15.png" alt="Update/Delete Absence Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit Changes</h5>
+      <p>Make your changes and click <strong>'Submit'</strong>.</p>
+      <p>Your updated leave will show as <em>'awaiting approval'</em> until your line manager reviews it.</p>
+      <p>Need more info? NHS England’s policy guidance is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === REQUEST FLEXIBLE WORKING == -->
+    <!-- =============================== -->
+    <div id="SS_ESS5" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Request Flexible Working</h3>
+          </div>
+          <div class="col-md-8">
+            <!-- Add policy links, form walkthroughs, or warm blurbs here -->
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>How to Submit a Flexible Working Request</h4>
+      <p>Log into ESR to begin.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS16.png" alt="ESR Login Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Navigate to Flexible Working</h5>
+      <p>Click <strong>'Flexible Working'</strong> under the <strong>My Employment</strong> section on the left-hand menu.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS17.png" alt="Flexible Working Menu Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Create a New Request</h5>
+      <p>Click <strong>'Create New Request'</strong> to begin your application.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS18.png" alt="Create Request Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Fill in Your Details</h5>
+      <p>Complete the form with as much detail as possible—this helps your manager understand your needs clearly.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS19.png" alt="Flexible Working Form Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit Your Request</h5>
+      <p>Click <strong>'Submit'</strong> to send your request.</p>
+      <p>You’ll receive confirmation that your request has been sent to your manager for consideration.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS20.png" alt="Submission Confirmation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UPDATE EQUALITY DETAILS === -->
+    <!-- =============================== -->
+    <div id="SS_ESS1" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Update Equality & Diversity Details</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Update Equality and Diversity Details</h4>
+            <h5><b>My Equality and Diversity Portlet</b></h5>
+            <h5>
+              Ethnic Origin, Country of Birth, Sexual Orientation, Religious
+              Belief, Marital Status, Disability
+            </h5>
+          </div>
+        </div>
+        <div class="container">
+          <!-- Step 1 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 1: Log into ESR</h5>
+              <p>
+                Once you're logged in, look for the
+                <strong>'My Equality and Diversity'</strong> portlet on your
+                dashboard.
+              </p>
+              <ul>
+                <li><strong>Red</strong>: No update in 12+ months</li>
+                <li><strong>Amber</strong>: No update in 9–12 months</li>
+                <li>
+                  <strong>Green</strong>: Updated within the last 9 months
                 </li>
-                <!-- ==== END SUBMENU ==== -->
-
               </ul>
-            </li>
-            <!-- ==== END DROPDOWN MENU ==== -->
-            <details class="mobile-toolbar d-sm-none mt-3">
-              <summary class="btn btn-outline-secondary w-100">Search & Settings</summary>
-              <div class="p-2">
-                <input type="text" id="searchInputDesktop" class="form-control mb-2" placeholder="Search the site" onkeyup="searchPages(this.value)" />
-                <select id="themeSelector" class="form-select form-select-sm mb-2 theme-selector" aria-label="Choose Theme">
-                  <option value="blue">NHS Blue</option>
-                  <option value="green">NHS Green</option>
-                  <option value="grey">NHS Grey</option>
-                  <option value="pink">NHS Pink</option>
-                  <option value="purple">NHS Purple</option>
-                  <option value="red">NHS Red</option>
-                  <option value="yellow">NHS Yellow</option>
-                  <option value="calm">Light Grey</option>
-                  <option value="contrast">High Contrast</option>
-                </select>
-                <div class="btn-group btn-group-sm w-100 mb-2" role="group">
-                  <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A-</button>
-                  <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
-                  <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
-                </div>
-                <button class="btn btn-sm btn-outline-primary w-100 toggle-dark">Dark Mode</button>
-              </div>
-            </details>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS1.png"
+                alt="Equality and Diversity Portlet"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 2: Expand 'View Details'</h5>
+              <p>
+                Click on the <strong>'View Details'</strong> section to expand
+                and see your current information.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS2.png"
+                alt="View Details Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 3: Click 'Update My Information'</h5>
+              <p>
+                Click the <strong>'Update My Information'</strong> button to
+                begin editing your details.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS3.png"
+                alt="Update Information Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 4: Confirm Your Details</h5>
+              <p>
+                Fill in or review the relevant fields, then click
+                <strong>'Confirm'</strong> to save your updates.
+              </p>
+              <p>
+                Once confirmed, your portlet colour will update accordingly.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS4.png"
+                alt="Confirmation Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UPDATE PERSONAL DETAILS === -->
+    <!-- =============================== -->
+    <div id="SS_ESS2" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Update My Personal Details</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Update My Personal Details</h4>
+            <h5><b>My Personal Information Portlet</b></h5>
+            <h5>Adress, Next of Kin and Wellbeing Information</h5>
+          </div>
+        </div>
+        <div class="container">
+          <!-- Step 1 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 1: Log into ESR</h5>
+              <p>
+                Once you're logged in, locate the
+                <strong>'My Equality and Diversity'</strong> portlet.
+              </p>
+              <ul>
+                <li><strong>Red</strong>: No update in 12+ months</li>
+                <li><strong>Amber</strong>: No update in 9–12 months</li>
+                <li>
+                  <strong>Green</strong>: Updated within the last 9 months
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS5.png"
+                alt="Equality and Diversity Portlet"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 2: Click 'Update My Information'</h5>
+              <p>
+                This opens a screen with three tabs along the top. To update
+                your address, click the <strong>'My Address'</strong> tab.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS6.png"
+                alt="My Address Tab Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 3: Update Emergency Contacts</h5>
+              <p>
+                Click the <strong>'My Emergency Contacts'</strong> tab to review
+                or update your emergency contact details.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS7.png"
+                alt="Emergency Contacts Tab Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5>Step 4: Update Wellbeing Information</h5>
+              <p>
+                Click the <strong>'My Wellbeing Information'</strong> tab to
+                update details such as:
+              </p>
+              <ul>
+                <li>Whether you're a <strong>Working Carer</strong></li>
+                <li>
+                  If you're an <strong>Armed Forces Veteran</strong>, reservist,
+                  or family member
+                </li>
+              </ul>
+              <p>
+                Once complete, click <strong>'Save'</strong>. Your details will
+                be updated immediately.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12 text-center">
+              <img
+                src="Assets/NHSE_ESS8.png"
+                alt="Wellbeing Tab Screenshot"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW EMPLOYMENT INFO ====== -->
+    <!-- =============================== -->
+    <div id="SS_ESS6" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Employment Information</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To View My Employment Information</h4>
+          <h5><b>View My Employment Information</b></h5>
+          <h5>All Employees can view their employment information through ESR.</h5>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>How to View Your Employment Information</h4>
+      <p>Once you're logged into ESR, the <strong>Employee Dashboard</strong> will appear by default.</p>
+      <p>Click <strong>'Employment Information'</strong> in the <strong>My Employment</strong> section on the left-hand menu.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS21.png" alt="Employment Info Button Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Review Your Assignment Details</h5>
+      <p>Here you can view your <strong>current and previous assignments</strong>, including:</p>
+      <ul>
+        <li>Hire dates</li>
+        <li>Years in service</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS22.png" alt="Assignment Overview Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: View Assignment Details</h5>
+      <p>Click the <strong>arrow in the 'Details'</strong> column to view more information about a specific assignment.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS23.png" alt="Assignment Details Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Need More Info?</h5>
+      <p>You can find NHS England’s policy guidance <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW PAYSLIP & P60 ======== -->
+    <!-- =============================== -->
+    <div id="SS_ESS7" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Payslip and P60</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To View Payslip and P60</h4>
+          <h5><b>View My Payslip and P60</b></h5>
+          <h5>All Employees can view their payslips and P60s in ESR.</h5>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Payslip Section -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>View My Payslips</h4>
+      <p>Once you're logged into ESR, the <strong>Employee Dashboard</strong> will appear by default.</p>
+      <p>Click <strong>'View My Payslips'</strong> in the <strong>My Payslips and P60</strong> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS24.png" alt="View My Payslips Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Payslip Selection -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Choose a Pay Period</h5>
+      <p>Select the pay period you want to view from the dropdown menus, then click <strong>'View Payslip'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS25.png" alt="Payslip Dropdown Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Payslip Download -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Download Your Payslip</h5>
+      <p>Your payslip will automatically download once selected.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS26.png" alt="Payslip Download Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+
+          <div class="container">
+  <!-- P60 Section -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>View My P60</h4>
+      <p>Once you're logged in, click <strong>'View My P60s'</strong> in the <strong>My Payslips and P60</strong> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS27.png" alt="View My P60s Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- P60 Selection -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Choose a Year</h5>
+      <p>Select the year you want to view and click <strong>'View Report'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS28.png" alt="P60 Year Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- P60 Display -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: View Your P60</h5>
+      <p>Your P60 will be displayed on screen.</p>
+      <p>Need more info? NHS England’s policy guidance is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS29.png" alt="P60 Display Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW REWARD STATEMENT ===== -->
+    <!-- =============================== -->
+    <div id="SS_ESS8" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Total Reward Statement</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To View My Total Reward Statement</h4>
+          <h5><b>View My Total Reward Statement</b></h5>
+          <h5>All Employees can view their Total Reward Statement (TRS) in ESR.</h5>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Access TRS -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>View My Total Reward Statement (TRS)</h4>
+      <p>Once you're logged into ESR, the <strong>Employee Dashboard</strong> will appear by default.</p>
+      <p>Click <strong>'View My TRS'</strong> in the <strong>Total Reward Statements</strong> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS30.png" alt="View My TRS Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Statement Display -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: View Your Statement</h5>
+      <p>Your Total Reward Statement will appear automatically.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS31.png" alt="TRS Statement Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Explore Tabs -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Explore Employer Benefits and Pensions</h5>
+      <p>Click the <strong>'Employer Benefits'</strong> tab to view additional entitlements.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS32.png" alt="Employer Benefits Tab Screenshot" class="img-fluid" />
+    </div>
+    <div class="col-md-12 mt-4">
+      <p>You can also click the <strong>'Pensions'</strong> tab to view your NHS pension details.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_ESS33.png" alt="Pensions Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Submit a Query</h5>
+      <p>You can securely contact the NHS BSA TRS Helpdesk via the TRS website:</p>
+      <ol>
+        <li>Click on the <strong>'Need Help'</strong> link.</li>
+        <li>Click <strong>'Submit a Query'</strong> under Help Topics.</li>
+        <li>Select a category from the <strong>'Subject Area'</strong> dropdown:
+          <ul>
+            <li>General Enquiry</li>
+            <li>Login</li>
+            <li>Pension Statement</li>
+            <li>Employment</li>
           </ul>
-        </div>
+        </li>
+        <li>Enter your <strong>Email Address</strong> (required).</li>
+        <li>Enter your <strong>Telephone Number</strong> (required).</li>
+        <li>Enter your <strong>Comments</strong> or enquiry details (required).</li>
+        <li>Click <strong>'Submit Query'</strong> to send your request.</li>
+      </ol>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
       </div>
-    </nav>
+    </div>
 
-    <!-- ======================================== -->
-    <!-- ====== TOOLBAR: SEARCH + SETTINGS ====== -->
-    <!-- ======================================== -->
-    <!-- Collapsible Toolbar -->
+    <!-- =============================== -->
+    <!-- === MANAGER SELF SERVICE ====== -->
+    <!-- =============================== -->
+    <div id="MSS_LP" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Manager Self Service</h3>
+          </div>
+          <div class="col-md-8">
+            <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS_LP')">Manager Self Service</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS11')">Overview of Manager Dashboard</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS1')">How To Approve Annual Leave Requests</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS2')">How To Change a Member of Staff's Hours</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS3')">How To Change a Member of Staff's Supervisor</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS4')">How To Enter Annual Leave on Employees Behalf</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS5')">How To Enter Authorised Unpaid Absence</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS6')">How To Enter Sickness Absence</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS7')">How To Enter Unauthorised Absence</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS8')">How To Extend a Fixed Term Contract</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS9')">How To Input a Career Break</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS10')">How To Input a Pay Progression Meeting</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS12')">How To Respond to Flexible Working Request</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS13')">How To Terminate a Member of Staff</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS14')">How To Update a Staff Members Office Location</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS15')">How To Update a Staff Member's Working Pattern</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS16')">How To Update Staff Personal Information</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS17')">How To View My Organisation Chart</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS18')">How To View My Teams Absence</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS19')">How To View My Teams Training Compliance</button>
+<button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('MSS20')">How to Log Disability Leave in ESR</button>            
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <div class="container mt-3 d-none d-sm-block">
-      <div class="row align-items-center g-2">
-        <!-- Site Search -->
-        <div class="col">
-          <input type="text" id="searchInputMobile" class="form-control" placeholder="Search the site" onkeyup="searchPages(this.value)" />
-        </div>
-        <!-- Theme & Accessibility Controls -->
-        <div class="col-auto">
-          <div class="control-toolbar d-flex flex-wrap gap-2 p-2 rounded">
-            <!-- Theme Selector -->
-            <select id="themeSelector" class="form-select form-select-sm w-auto theme-selector" aria-label="Choose Theme">
-              <option value="blue">NHS Blue</option>
-              <option value="green">NHS Green</option>
-              <option value="grey">NHS Grey</option>
-              <option value="pink">NHS Pink</option>
-              <option value="purple">Purple</option>
-              <option value="red">NHS Red</option>
-              <option value="yellow">NHS Yellow</option>
-              <option value="calm">Light Grey</option>
-              <option value="contrast">High Contrast</option>
-            </select>
-            <!-- Text Size Buttons -->
-            <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
-              <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A-</button>
-              <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
-              <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
-              <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">A++</button>
-            </div>
-            <!-- Dark Mode Toggle -->
-            <button class="btn btn-sm btn-outline-primary toggle-dark">Dark Mode</button>
+    <!-- =============================== -->
+    <!-- === OVERVIEW DASHBOARD ======== -->
+    <!-- =============================== -->
+    <div id="MSS11" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Overview of Manager Dashboard</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>Overview of Manager Dashboard</h4>
+          <h5><b>Dashboard</b></h5>
           </div>
         </div>
-      </div>
+        <div class="container">
+  <!-- Section 1: Logging In -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>🔐 Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong> by default.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access manager functions.</p>
     </div>
-  </header>
-  <!-- =============================== -->
-  <!-- ====== HOME PAGE SECTION ====== -->
-  <!-- =============================== -->
-  <div id="home" class="page active">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient Title -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Learning and Development Hub</h3>
-        </div>
-        <!-- Main Welcome Text -->
-        <div class="col-md-8">
-          <h4>Welcome to the Learning and Development Hub</h4>
-          <p>
-            The hub provides access to a range of information to support personal learning and development needs,
-            guidance on using ESR Learning Management, and a catalogue of available training courses.
-          </p>
-          <p>
-            We hope you find this page useful and informative. Please explore the sections and links provided. If you have
-            feedback or suggestions, we’d love to hear from you. Your input helps us improve and serve you better — thank
-            you for being part of our team.
-          </p>
-        </div>
-      </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS68.png" alt="Manager Tab Screenshot" class="img-fluid" />
     </div>
   </div>
 
-  <!-- ================================= -->
-  <!-- ====== GUIDES PAGE SECTION ====== -->
-  <!-- ================================= -->
-  <div id="guides" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient Title -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Guidance</h3>
-        </div>
-        <!-- Main Description -->
-        <div class="col-md-8">
-          <h4>ESR Learning Management Guidance</h4>
-          <p>This section provides access to user guides for using the ESR Learning Management system.</p>
-        </div>
-      </div>
-      <!-- ============================================ -->
-      <!-- ====== GUIDE SECTION BUTTONS & MODALS ====== -->
-      <!-- ============================================ -->
-      <div class="row">
-        <div class="col-md">
-          <!-- Guide: Identifying Outstanding Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#outstandingTrainingModal">
-            Identifying Training that is Outstanding
-          </button>
-          <div class="modal fade" id="outstandingTrainingModal" tabindex="-1" aria-labelledby="outstandingTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="outstandingTrainingModalLabel">Identifying Outstanding Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg?scrollToActionId=f250e1dd" width="100%" height="800" allowfullscreen style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Enrolling onto e-Learning -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#enrolmentModal">
-            Enrolling onto e-Learning Courses
-          </button>
-          <div class="modal fade" id="enrolmentModal" tabindex="-1" aria-labelledby="enrolmentModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="enrolmentModalLabel">Enrolling onto e-Learning Courses</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=426c0f0f" width="100%" height="800" allowfullscreen style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Playing e-Learning Modules -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#playCoursesModal">
-            Playing e-Learning Courses you are Enrolled On
-          </button>
-          <div class="modal fade" id="playCoursesModal" tabindex="-1" aria-labelledby="playCoursesModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="playCoursesModalLabel">Playing Enrolled e-Learning Courses</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=4c19c4b1" width="100%" height="800" allowfullscreen style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Classroom Training Enrolment -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#classroomTrainingModal">
-            Enrolling onto Classroom Training
-          </button>
-          <div class="modal fade" id="classroomTrainingModal" tabindex="-1" aria-labelledby="classroomTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="classroomTrainingModalLabel">Enrolling onto Classroom Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=17ab0147" width="100%" height="800" allowfullscreen style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Viewing Booked Classes -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#bookedClassesModal">
-            Viewing Details of Classes you are Booked On
-          </button>
-          <div class="modal fade" id="bookedClassesModal" tabindex="-1" aria-labelledby="bookedClassesModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="bookedClassesModalLabel">Viewing Booked Class Details</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=1fda98e6" width="100%" height="800" allowfullscreen style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Cards -->
+  <!-- Section 2: Notifications -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>🔔 Notifications</h5>
+      <p>Access your notifications via the <strong>red circle icon</strong> in the top right corner of the dashboard.</p>
+      <ul>
+        <li>Open and action notifications directly from the list</li>
+        <li>Select multiple notifications to close at once</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS70.png" alt="Notifications Screenshot" class="img-fluid" />
+    </div>
+  </div>
 
-        </div>
-      </div>
+  <!-- Section 3: Navigation -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>🗂️ Navigation</h5>
+      <p>Use the <strong>left-hand navigation</strong> panel to move between different areas of Self Service.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS71.png" alt="Navigation Panel Screenshot" class="img-fluid" />
     </div>
   </div>
-  <!-- =============================== -->
-  <!-- ====== FAQS PAGE SECTION ====== -->
-  <!-- =============================== -->
-  <div id="faqs" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient Title -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">FAQs</h3>
-        </div>
-        <!-- FAQ Introduction -->
-        <div class="col-md-8">
-          <h4>ESR Learning Management Guidance</h4>
-          <p>This section provides answers to common questions about using the ESR Learning Management system.</p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!-- FAQ 1: Compliance Not Updated -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#complianceIssueModal">
-            I've completed training but my compliance hasn't updated — what can I do?
-          </button>
-          <div class="modal fade" id="complianceIssueModal" tabindex="-1" aria-labelledby="complianceIssueModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Compliance Not Updated</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>E-learning:</strong> Ensure you’ve clicked the house icon to exit and earned a completion certificate.</p>
-                  <p><strong>Face-to-face/MS Teams:</strong> Allow up to 10 working days for manual updates. If still missing, email <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 2: External Training Recognition -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#externalTrainingModal">
-            Will mandatory training from another organisation be recognised?
-          </button>
-          <div class="modal fade" id="externalTrainingModal" tabindex="-1" aria-labelledby="externalTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="externalTrainingModalLabel">External Training Recognition</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>Most training transfers via the IAT process. If any records appear missing, email <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with evidence for manual review.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 3: Certification Expired -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#certificationExpiredModal">
-            What do I do if my certification says "expired"?
-          </button>
-          <div class="modal fade" id="certificationExpiredModal" tabindex="-1" aria-labelledby="certificationExpiredModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="certificationExpiredModalLabel">Certification Expired</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Renew your competency:</strong> Re-access the course as soon as possible. If progress resets, ask your manager to confirm completion via email.</p>
-                  <p>If you're locked out or concerned, contact <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 4: Incorrect Requirements Display -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#incorrectRequirementModal">
-            My Compliance Portlet shows the wrong requirements — what now?
-          </button>
-          <div class="modal fade" id="incorrectRequirementModal" tabindex="-1" aria-labelledby="incorrectRequirementModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="incorrectRequirementModalLabel">Incorrect Compliance Requirements</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p>Email <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with the incorrect details so your matrix can be updated.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ 5: Missing Play Button -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#playButtonIssueModal">
-            My ‘Play’ button is greyed out or missing — how do I start the course?
-          </button>
-          <div class="modal fade" id="playButtonIssueModal" tabindex="-1" aria-labelledby="playButtonIssueModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="playButtonIssueModalLabel">Missing Play Button Help</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <ol>
-                    <li>Go to ‘My Compliance’, select the course, and click the magnifying glass icon.</li>
-                    <li>If unsubscribed, click 'Details', then 'Subscribe' and 'Enrol'.</li>
-                    <li>On the next screen, click 'Enrol' for course modules.</li>
-                    <li>If the green 'Play' button doesn't appear, try 'Select an Action' and choose 'Play'.</li>
-                    <li>If nothing appears, click the module title to reveal a secondary 'Select an Action'.</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ====================================== -->
-  <!-- ====== COURSE CATALOGUE SECTION ====== -->
-  <!-- ====================================== -->
-  <div id="CC" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Course Catalogue</h3>
-        </div>
-        <!-- Catalogue Description -->
-        <div class="col-md-8">
-          <h4>Browse Available Courses</h4>
-          <p>You can book these via ESR. The catalogue is divided by type below:</p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ==================================================== -->
-  <!-- ====== STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ==================================================== -->
-  <div id="SaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Statutory and Mandatory Training</h3>
-        </div>
-        <!-- Section Description -->
-        <div class="col-md-8">
-          <h4>Required Training for All Roles</h4>
-          <p>Courses shown in My Compliance within ESR must be completed. Use the guides section for instructions on how to launch these.</p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!--  Basic Life Support -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#blsModal">
-            Basic Life Support (BLS)
-          </button>
-          <div class="modal fade" id="blsModal" tabindex="-1" aria-labelledby="blsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="blsModalLabel">Basic Life Support (BLS)</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Who should attend:</strong> Staff with emergency response duties.</p>
-                  <p><strong>Method:</strong> Face-to-face session (3 hours 30 minutes).</p>
-                  <p><strong>Details:</strong> Covers theory and practical assessment. Mandatory for roles with access to emergency equipment.</p>
-                  <p>
-                    <a class="btn btn-primary" href="#" onclick="openPopup('https://intranet.tewv.nhs.uk/training-centre')">BOOK NOW</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- CPR -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#cprModal">Cardiopulmonary Resuscitation (CPR)</button>
-          <div class="modal fade" id="cprModal" tabindex="-1" aria-labelledby="cprModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="cprModalLabel">Cardiopulmonary Resuscitation (CPR)</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> Staff who respond but don’t use emergency bags.</p>
-                  <p><strong>Method:</strong> Face-to-face session (1 hour).</p>
-                  <p><strong>Details:</strong> Life-saving technique for sustaining circulation and ventilation.</p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my-epro.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Data Security Awareness -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#dataSecurityModal">Data Security Awareness</button>
-          <div class="modal fade" id="dataSecurityModal" tabindex="-1" aria-labelledby="dataSecurityModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="dataSecurityModalLabel">Data Security Awareness</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> All staff.</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <p><strong>Note:</strong> Must be completed within first 3 months. Required for System One access.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Dementia -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#dementiaModal">Dementia Training</button>
-          <div class="modal fade" id="dementiaModal" tabindex="-1" aria-labelledby="dementiaModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="dementiaModalLabel">Dementia Training Overview</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1</h5>
-                  <p><strong>Audience:</strong> Staff without direct contact.</p>
-                  <p><strong>Method:</strong> Video (50 mins).</p>
-                  <p><strong>Renewal:</strong> One-off.</p>
-                  <hr />
-                  <h5>Level 2</h5>
-                  <p><strong>Audience:</strong> Staff regularly interacting with patients.</p>
-                  <p><strong>Method:</strong> e-Learning (1hr 50mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 2 - Refresher</h5>
-                  <p><strong>Audience:</strong> Those who completed Level 2 initially.</p>
-                  <p><strong>Method:</strong> e-Learning (1hr 40mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Equality, Diversity and Human Rights -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#equalityModal">Equality, Diversity and Human Rights</button>
-          <div class="modal fade" id="equalityModal" tabindex="-1" aria-labelledby="equalityModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="equalityModalLabel">Equality, Diversity and Human Rights</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> All staff.</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                  <p><strong>Note:</strong> Complete within first 3 months to support inclusive practices.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Fire Safety -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#fireSafetyModal">Fire Safety</button>
-          <div class="modal fade" id="fireSafetyModal" tabindex="-1" aria-labelledby="fireSafetyModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="fireSafetyModalLabel">Fire Safety</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>General Staff</h5>
-                  <p><strong>Method:</strong> Induction: face-to-face or virtual (1–2 hrs); refresher: face-to-face, virtual, or e-learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> Every 2 years.</p>
-                  <hr />
-                  <h5>Clinical Staff (Hannah House/Wharfedale)</h5>
-                  <p><strong>Method:</strong> Face-to-face (2 hrs).</p>
-                  <p><strong>Renewal:</strong> Annual.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Infection Prevention & Control -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#infectionModal">Infection Prevention and Control</button>
-          <div class="modal fade" id="infectionModal" tabindex="-1" aria-labelledby="infectionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="infectionModalLabel">Infection Prevention and Control</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1 - Non-Clinical</h5>
-                  <p><strong>Method:</strong> e-Learning (30 mins). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 2 - Clinical</h5>
-                  <p><strong>Method:</strong> e-Learning (1 hr). <strong>Renewal:</strong> Every 2 years.</p>
-                  <hr />
-                  <h5>Domestic Caretakers</h5>
-                  <p><strong>Method:</strong> e-Learning (45 mins). <strong>Renewal:</strong> Every 2 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Mental Capacity Act -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#mentalCapacityModal">Mental Capacity Act</button>
-          <div class="modal fade" id="mentalCapacityModal" tabindex="-1" aria-labelledby="mentalCapacityModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="mentalCapacityModalLabel">Mental Capacity Act</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> Clinical staff completing Safeguarding Adults training.</p>
-                  <p><strong>Method:</strong> Virtual class (2 hrs) or e-Learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Moving and Handling -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#movingHandlingModal">Moving and Handling</button>
-          <div class="modal fade" id="movingHandlingModal" tabindex="-1" aria-labelledby="movingHandlingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="movingHandlingModalLabel">Moving and Handling</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1 - Admin & Support</h5>
-                  <p><strong>Method:</strong> e-Learning (30 mins). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Inanimate Loads – LES Staff</h5>
-                  <p><strong>Method:</strong> e-Learning + Face-to-face. <strong>Renewal:</strong> Every 2 years.</p>
-                  <hr />
-                  <h5>Low-Level (No Equipment)</h5>
-                  <p><strong>Method:</strong> e-Learning (1 hr). <strong>Renewal:</strong> Every 2 years.</p>
-                  <hr />
-                  <h5>High-Level (With Equipment)</h5>
-                  <p><strong>Method:</strong> Induction (1 day), Refresher (½ day). <strong>Renewal:</strong> Every 2 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Oliver McGowan Mandatory Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#oliverMcGowanModal">Oliver McGowan Mandatory Training</button>
-          <div class="modal fade" id="oliverMcGowanModal" tabindex="-1" aria-labelledby="oliverMcGowanModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="oliverMcGowanModalLabel">Oliver McGowan Mandatory Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> All staff.</p>
-                  <p><strong>Method:</strong> e-Learning (1 hr 50 mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                  <p><strong>Note:</strong> Complete within first 3 months to support informed care around learning disability and autism.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Patient Safety -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#patientSafetyModal">Patient Safety</button>
-          <div class="modal fade" id="patientSafetyModal" tabindex="-1" aria-labelledby="patientSafetyModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="patientSafetyModalLabel">Patient Safety</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1</h5>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> One-off.</p>
-                  <hr />
-                  <h5>Level 2</h5>
-                  <p><strong>Method:</strong> e-Learning (20 mins).</p>
-                  <p><strong>Renewal:</strong> One-off.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Pressure Ulcer Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#pressureUlcerModal">Pressure Ulcer</button>
-          <div class="modal fade" id="pressureUlcerModal" tabindex="-1" aria-labelledby="pressureUlcerModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="pressureUlcerModalLabel">Pressure Ulcer</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> Clinical staff (Adults and Children).</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> Every 2 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Prevent Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#preventTrainingModal">Prevent Training</button>
-          <div class="modal fade" id="preventTrainingModal" tabindex="-1" aria-labelledby="preventTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="preventTrainingModalLabel">Prevent Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1</h5>
-                  <p><strong>Audience:</strong> Non-clinical and support staff.</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <hr />
-                  <h5>Level 3</h5>
-                  <p><strong>Audience:</strong> All clinical staff.</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Resuscitation -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#resuscitationModal">Resuscitation</button>
-          <div class="modal fade" id="resuscitationModal" tabindex="-1" aria-labelledby="resuscitationModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="resuscitationModalLabel">Resuscitation</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> All clinical staff.</p>
-                  <p><strong>Method:</strong> e-Learning + Face-to-face practical (2 hrs).</p>
-                  <p><strong>Renewal:</strong> Every 1 year.</p>
-                  <ul>
-                    <li>Complete: <em>Resuscitation Adult Level 2</em> + <em>Paediatric Level 2</em></li>
-                    <li>View: <em>Anaphylaxis PowerPoint video</em></li>
-                    <li>Book within 3 months: <em>Practical CPR Assessment</em></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Safeguarding Adults -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingAdultsModal">Safeguarding Adults</button>
-          <div class="modal fade" id="safeguardingAdultsModal" tabindex="-1" aria-labelledby="safeguardingAdultsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="safeguardingAdultsModalLabel">Safeguarding Adults</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1</h5>
-                  <p><strong>Audience:</strong> Staff interacting with adults at risk (direct or via phone).</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 2</h5>
-                  <p><strong>Audience:</strong> All clinical staff.</p>
-                  <p><strong>Method:</strong> e-Learning (30 mins). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 3</h5>
-                  <p><strong>Audience:</strong> Registered healthcare professionals managing adult safeguarding cases.</p>
-                  <p><strong>Method:</strong> Virtual Classroom (3 hrs initial, 1.5 hrs refresher). <strong>Renewal:</strong> Every 3 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Safeguarding Children -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingChildrenModal">Safeguarding Children</button>
-          <div class="modal fade" id="safeguardingChildrenModal" tabindex="-1" aria-labelledby="safeguardingChildrenModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="safeguardingChildrenModalLabel">Safeguarding Children</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <h5>Level 1</h5>
-                  <p><strong>Audience:</strong> Staff without direct contact with children.</p>
-                  <p><strong>Method:</strong> e-Learning (1 hr). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 2</h5>
-                  <p><strong>Audience:</strong> Staff serving children/families (e.g., dentists, nurses, audiologists).</p>
-                  <p><strong>Method:</strong> e-Learning (1 hr). <strong>Renewal:</strong> Every 3 years.</p>
-                  <hr />
-                  <h5>Level 3</h5>
-                  <p><strong>Audience:</strong> Staff involved in child safeguarding plans (CAMHS, school nurses, paediatricians, etc.).</p>
-                  <p><strong>Method:</strong> Part 1: e-Learning; Part 2: LSCP full-day course; Part 3: LSCP refresher (2 hrs).</p>
-                  <p><strong>Renewal:</strong> Every 3 years.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ======================================================== -->
-  <!-- ====== NON STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ======================================================== -->
-  <div id="NSaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Non Statutory Mandatory Training</h3>
-        </div>
-        <!-- Page Description -->
-        <div class="col-md-8">
-          <h4>Optional & Supplementary Courses</h4>
-          <p>This section lists additional courses available via ESR that complement statutory training.</p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">Statutory and Mandatory Training</button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">Non Statutory and Mandatory Training</button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!-- Example: Appraiser Training Modal -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#appraiserTrainingModal">Appraiser Training</button>
-          <div class="modal fade" id="appraiserTrainingModal" tabindex="-1" aria-labelledby="appraiserTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="appraiserTrainingModalLabel">Appraiser Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> <em>Details to be confirmed</em></p>
-                  <p><strong>Method:</strong> <em>Details to be confirmed</em></p>
-                  <p><strong>Additional Info:</strong> <em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Conflict Resolution -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#conflictResolutionModal">Conflict Resolution – Conflict on the Telephone</button>
-          <div class="modal fade" id="conflictResolutionModal" tabindex="-1" aria-labelledby="conflictResolutionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="conflictResolutionModalLabel">Conflict Resolution</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><strong>Audience:</strong> <em>Details to be confirmed</em></p>
-                  <p><strong>Method:</strong> <em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Health Needs Assessment Induction -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#hnaInductionModal">Health Needs Assessment Induction</button>
-          <div class="modal fade" id="hnaInductionModal" tabindex="-1" aria-labelledby="hnaInductionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="hnaInductionModalLabel">Health Needs Assessment Induction</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- LEAD: Difficult Conversations -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#difficultConversationsModal">Difficult Conversations Training</button>
-          <div class="modal fade" id="difficultConversationsModal" tabindex="-1" aria-labelledby="difficultConversationsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="difficultConversationsModalLabel">Difficult Conversations Training</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- LEAD: Manager as Coach -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#managerCoachModal">Manager as Coach</button>
-          <div class="modal fade" id="managerCoachModal" tabindex="-1" aria-labelledby="managerCoachModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="managerCoachModalLabel">Manager as Coach</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- LEAD: Compassionate and Courageous Leadership -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#leadershipModal">Compassionate and Courageous Leadership</button>
-          <div class="modal fade" id="leadershipModal" tabindex="-1" aria-labelledby="leadershipModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="leadershipModalLabel">Compassionate and Courageous Leadership</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- LEAD: Quality Improvement Intro -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#qiModal">Introduction to Quality Improvement (QI)</button>
-          <div class="modal fade" id="qiModal" tabindex="-1" aria-labelledby="qiModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="qiModalLabel">Introduction to Quality Improvement</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Safeguarding Supervisor (Virtual) -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#childProtectionSupervisorModal">Safeguarding Child Protection Supervisor Training – Virtual</button>
-          <div class="modal fade" id="childProtectionSupervisorModal" tabindex="-1" aria-labelledby="childProtectionSupervisorModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="childProtectionSupervisorModalLabel">Child Protection Supervisor Training – Virtual</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Specialist Safeguarding Courses -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingSpecialistModal">Safeguarding Specialist Courses / 60-Minute Update</button>
-          <div class="modal fade" id="safeguardingSpecialistModal" tabindex="-1" aria-labelledby="safeguardingSpecialistModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="safeguardingSpecialistModalLabel">Safeguarding Specialist Courses</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Supervision of Supervisors -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#supervisionModal">Safeguarding Children – Supervision of Supervisors</button>
-          <div class="modal fade" id="supervisionModal" tabindex="-1" aria-labelledby="supervisionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="supervisionModalLabel">Supervision of Supervisors</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Wound Care -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#woundCareModal">Wound Care Study Day</button>
-          <div class="modal fade" id="woundCareModal" tabindex="-1" aria-labelledby="woundCareModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary">
-                  <h5 class="modal-title mb-0" id="woundCareModalLabel">Wound Care Study Day</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="card-body">
-                  <p><em>Details to be confirmed</em></p>
-                  <p><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk/...')">BOOK NOW</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ===================================== -->
-  <!-- ====== SUPPORT REQUEST SECTION ====== -->
-  <!-- ===================================== -->
-  <div id="SUP" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Support Request</h3>
-        </div>
-        <!-- Page Introduction -->
-        <div class="col-md-8">
-          <h4>Need Help with ESR Learning Management?</h4>
-          <p>
-            If you couldn’t find the guidance you needed from this site, please use the form below to reach out to the Learning & Development team.
-            We’ll aim to respond as soon as possible.
-          </p>
-        </div>
-      </div>
-      <!-- Embedded Support Form -->
-      <div class="row mt-4">
-        <div class="col-md">
-          <div class="ratio ratio-4x3" style="max-width: 100%;">
-            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsWOyxEjajBLZtrQAAAAAAAAAAAAa_eBfvaBUOU4zQ0wzV1IVOFkxM05SUK8yVkNBM1BWVS4u&embed=true" allowfullscreen style="border: none;">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ================================= -->
-  <!-- ============ FOOTER ============= -->
-  <!-- ================================= -->
-  <footer class="text-center py-4 mt-5 border-top">
-    <p class="mb-0">&copy; 2025 Lady Elizabeth Ann NHS Trust. Learning Information Hub.</p>
-    <small>For technical support, contact <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.</small>
-  </footer>
-  <!-- ================================= -->
-  <!-- ====== JAVASCRIPT INCLUDES ====== -->
-  <!-- ================================= -->
-  <!-- Bootstrap 5 Bundle (with Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom Script File -->
-  <script src="script.js"></script>
-</body>
 
+  <!-- Section 4: Portlets Overview -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📊 Dashboard Portlets</h5>
+      <p>Your dashboard includes several useful portlets for team management:</p>
+      <ul>
+        <li><strong>Organisation Chart</strong> – Displays your direct reports</li>
+        <li><strong>Absence Portlet</strong> – Overview of team absences</li>
+        <li><strong>Compliance Portlet</strong> – Training compliance status</li>
+        <li><strong>Team Actions</strong> – Upcoming events for staff in your hierarchy</li>
+        <li><strong>Pay Progression</strong> – Staff affected by pay progression in the next 3, 9, or 12 months</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS72.png" alt="Organisation Chart Screenshot" class="img-fluid mb-3" />
+      <img src="Assets/NHSE_MSS73.png" alt="Absence Portlet Screenshot" class="img-fluid mb-3" />
+      <img src="Assets/NHSE_MSS74.png" alt="Compliance Portlet Screenshot" class="img-fluid mb-3" />
+      <img src="Assets/NHSE_MSS75.png" alt="Team Actions Screenshot" class="img-fluid mb-3" />
+      <img src="Assets/NHSE_MSS76.png" alt="Pay Progression Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Section 5: Policy Guidance -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📚 Policy Support</h5>
+      <p>For further guidance on NHS England policies, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === APPROVE ANNUAL LEAVE ====== -->
+    <!-- =============================== -->
+    <div id="MSS1" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Approve Annual Leave Requests</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Annual Leave Requests</h4>
+          <h5><b>Approving Via Email</b></h5>
+          <p>On submission of an annual leave request, ESR will generate an interactive email to the managers. Managers can respond via the email buttons with an Approve or Reject.</p>
+          <p>Alternatively, managers can manage leave requests via the notifications queue in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Access Notifications -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Approving Via ESR Notification</h4>
+      <p>Once you're logged into ESR, the <strong>Employee Dashboard</strong> will appear by default.</p>
+      <p>Click the <strong>notifications icon</strong> (red circle) in the top right corner of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS1.png" alt="ESR Notification Icon Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Select Notification -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open the Relevant Notification</h5>
+      <p>Select the notification related to the absence request you need to review.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS2.png" alt="Leave Notification Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Review and Respond -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Review the Request and Choose an Action</h5>
+      <p>The notification will show the absence details submitted by the employee. You can choose one of the following:</p>
+      <ul>
+        <li><strong>Approve</strong>: The absence becomes visible to both manager and employee.</li>
+        <li><strong>Reject</strong>: You’ll be prompted to add rejection comments.</li>
+        <li><strong>Request Information</strong>: The workflow returns to the employee with your comments for resubmission.</li>
+      </ul>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS3.png" alt="Approval Options Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === CHANGE STAFF HOURS ======== -->
+    <!-- =============================== -->
+    <div id="MSS2" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Change a Member of Staff's Hours</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Change a Member of Staff's Hours</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a change can be made to an individual’s hours. Further detail and support can be found on the Hub.</p>
+          <h5><b>Changing Hours</b></h5>
+          <p>Managers can update staff's hours in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Access the Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Navigate to the Manager Tab</h4>
+      <p>Once logged into ESR, click the <strong>Manager Tab</strong> near the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS4.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Team Assignment Info -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open My Team Assignment Information</h5>
+      <p>Click the <strong>Hours</strong> link in the left-hand menu under <em>My Team Assignment Information</em>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS6.png" alt="Hours Link Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>Action</strong> next to the employee whose hours you wish to update.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS7.png" alt="Employee Action Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Enter Effective Date</h5>
+      <p>Input the date the change should take effect in the <strong>Effective Date</strong> field, then click <strong>Continue</strong>.</p>
+      <p><em>Tip:</em> Use a specific date to ensure the employee’s record and employment history are updated accurately.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS8.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Update Hours and Pattern -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Enter New Hours</h5>
+      <p>Fill in the new <strong>working hours</strong> and, if applicable, the <strong>working pattern</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS9.png" alt="Working Hours Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Submit Changes -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Finalise and Submit</h5>
+      <p>Select the <strong>reason for the change</strong> from the dropdown menu.</p>
+      <p>Click <strong>Submit</strong> to apply the changes. These will be visible to both the employee and manager.</p>
+      <p>Need policy guidance? Visit the NHS England HR Support A–Z <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS10.png" alt="Submit Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+</div>
+</div>
+ </div>
+  </div>
+
+    <!-- =============================== -->
+    <!-- === CHANGE SUPERVISOR ========= -->
+    <!-- =============================== -->
+    <div id="MSS3" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Change a Member of Staff's Supervisor</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Change a Member of Staff's Supervisor</h4>
+          <h5><b>Assigning a new supervisor to a member of staff.</b></h5>
+          <p>Managers change someone's supervisor in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Access ESR and Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log in and Navigate</h4>
+      <p>Once logged into ESR, you'll land on the <strong>Employee Dashboard</strong> by default.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS11.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Open Supervisor Section -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Access Supervisor Settings</h5>
+      <p>Click the <strong>Supervisor</strong> link in the <em>My Team Assignment Information</em> section on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS13.png" alt="Supervisor Link Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>Action</strong> next to the employee whose supervisor details you wish to update.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS14.png" alt="Employee Action Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Enter Effective Date</h5>
+      <p>Select the date the change should take effect, then click <strong>Continue</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS15.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Assign New Supervisor -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Search and Select Supervisor</h5>
+      <p>Click the <strong>magnifying glass</strong> next to the Supervisor field.</p>
+      <p>Use the search and quick select options to assign the new supervisor.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS17.png" alt="Supervisor Search Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Assign Direct Reports (Optional) -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Add Direct Reports (if applicable)</h5>
+      <p>If the employee will manage new direct reports, use the <strong>Search By</strong> field to find and assign them.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS19.png" alt="Direct Reports Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 7: Review and Submit -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 7: Finalise Changes</h5>
+      <p>Click <strong>Next</strong> to review your changes.</p>
+      <p>If everything looks correct, click <strong>Submit</strong>.</p>
+      <p>Your updates will now be applied and visible in the system.</p>
+      <p>Need policy guidance? Visit the NHS England HR Support A–Z <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS21.png" alt="Submit Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === ENTER LEAVE ON BEHALF ===== -->
+    <!-- =============================== -->
+    <div id="MSS4" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">
+              Enter Annual Leave on Employee's Behalf
+            </h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Enter Annual Leave on Employees Behalf</h4>
+          <h5><b>Entering Annual Leave</b></h5>
+          <p>Managers can enter annual leave on behalf of their team.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll see the <strong>Employee Dashboard</strong> by default.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS22.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Open Team Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Access Team Absence</h5>
+      <p>Click <strong>'Manage Absence'</strong> in the <em>Team Absence</em> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS24.png" alt="Manage Absence Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Select the relevant employee from your team list.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS25.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Enter Absence Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Annual Leave Dates</h5>
+      <p>Select <strong>'Annual Leave'</strong> as the absence type, then enter the <strong>start and end dates</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS26.png" alt="Annual Leave Entry Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit the Request</h5>
+      <p>Click <strong>'Submit'</strong> to apply the changes. The leave will be visible to both the employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Additional Absence Types -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📄 For Other Absence Types</h5>
+      <p>For the following types of absence, a form must be completed and sent to HR Services:</p>
+      <ul>
+        <li>Maternity / Paternity / Adoption</li>
+        <li>Career Break (request)</li>
+        <li>Study Leave</li>
+      </ul>
+      <p>You can access the forms <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/ESR-Guidance.aspx" target="_blank">here</a>.</p>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === AUTHORISED UNPAID ========= -->
+    <!-- =============================== -->
+    <div id="MSS5" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Enter Authorised Unpaid Absence</h3>
+          </div>
+          <div class="col-md-8">
+             <h4>How To Enter Authorised Unpaid Absence</h4>
+          <h5><b>Entering Unpaid Absence</b></h5>
+          <p>Managers can enter an instance of authorised unpaid absence.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS27.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Open Team Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Access Team Absence</h5>
+      <p>Click <strong>'Manage Absence'</strong> in the <em>Team Absence</em> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS29.png" alt="Manage Absence Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Select the relevant employee from your team list.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS30.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Enter Unpaid Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Absence Details</h5>
+      <p>Select <strong>'Authorised Unpaid Absence'</strong> as the absence type, then enter the <strong>start date</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS31.png" alt="Unpaid Absence Entry Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit the Request</h5>
+      <p>Click <strong>'Submit'</strong> to apply the changes. The absence will be visible to both the employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Step 6: Ending the Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: End the Absence</h5>
+      <p>To end the absence, repeat the steps above and select the <strong>open absence</strong> for the employee. Enter the <strong>end date</strong> and click <strong>'Submit'</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Additional Absence Types -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📄 For Other Absence Types</h5>
+      <p>For the following types of absence, a form must be completed and sent to HR Services:</p>
+      <ul>
+        <li>Maternity / Paternity / Adoption</li>
+        <li>Career Break (request)</li>
+        <li>Study Leave</li>
+      </ul>
+      <p>You can access the forms <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/ESR-Guidance.aspx" target="_blank">here</a>.</p>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === SICKNESS ABSENCE ========== -->
+    <!-- =============================== -->
+    <div id="MSS6" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Enter Sickness Absence</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Enter Sickness Absence</h4>
+          <h5><b>Entering Sickness</b></h5>
+          <p>Once you are made aware of an Employee's sickness absence, you should enter it in ESR as soon as possible.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS32.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Open Team Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Access Team Absence</h5>
+      <p>Click <strong>'Manage Absence'</strong> in the <em>Team Absence</em> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS34.png" alt="Manage Absence Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Select the relevant employee from your team list.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS35.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Enter Sickness Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Sickness Absence</h5>
+      <p>Select the <strong>Level 1 and Level 2 sickness reasons</strong>, enter the <strong>start date</strong>, and if known, the <strong>end date</strong>. Complete any other relevant fields.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS36.png" alt="Sickness Absence Entry Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit the Request</h5>
+      <p>Click <strong>'Submit'</strong> to apply the changes. The absence will be visible to both the employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Step 6: Ending the Sickness -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: End the Absence</h5>
+      <p>To end the sickness absence, repeat the steps above and select the <strong>open absence</strong> for the employee. Enter the <strong>end date</strong> and click <strong>'Submit'</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Additional Absence Types -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📄 For Other Absence Types</h5>
+      <p>For the following types of absence, a form must be completed and sent to HR Services:</p>
+      <ul>
+        <li>Maternity / Paternity / Adoption</li>
+        <li>Career Break (request)</li>
+        <li>Study Leave</li>
+      </ul>
+      <p>You can access the forms <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/ESR-Guidance.aspx" target="_blank">here</a>.</p>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UNAUTHORISED ABSENCE ====== -->
+    <!-- =============================== -->
+    <div id="MSS7" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Enter Unauthorised Absence</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How To Enter Unauthorised Absence</h4>
+          <h5><b>Entering Unauthorised Absence</b></h5>
+          <p>Once you are made aware of an Employee's unauthorised absence, you should enter it in ESR as soon as possible.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS37.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Open Team Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Access Team Absence</h5>
+      <p>Click <strong>'Manage Absence'</strong> in the <em>Team Absence</em> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS39.png" alt="Manage Absence Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Select the relevant employee from your team list.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS40.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Enter Absence Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Absence Type</h5>
+      <p>Select <strong>'Unpaid Unauthorised Special'</strong> as the absence type. Enter the <strong>start date</strong> and provide the <strong>absence reason</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS41.png" alt="Absence Entry Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Submit the Request</h5>
+      <p>Click <strong>'Submit'</strong> to apply the changes. The absence will be visible to both the employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Step 6: Ending the Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: End the Absence</h5>
+      <p>To end the absence, repeat the steps above and select the <strong>open absence</strong> for the employee. Enter the <strong>end date</strong> and click <strong>'Submit'</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Additional Absence Types -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📄 For Other Absence Types</h5>
+      <p>For the following types of absence, a form must be completed and sent to HR Services:</p>
+      <ul>
+        <li>Maternity / Paternity / Adoption</li>
+        <li>Career Break (request)</li>
+        <li>Study Leave</li>
+      </ul>
+      <p>You can access the forms <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/ESR-Guidance.aspx" target="_blank">here</a>.</p>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === EXTEND FIXED TERM ========= -->
+    <!-- =============================== -->
+    <div id="MSS8" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Extend a Fixed Term Contract</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>Extend a Fixed Term Contract</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a Fixed Term Contract can be extended. Further detail and support can be found on the Hub.</p>
+          <h5><b>Extending a Fixed Term Contract</b></h5>
+          <p>Managers can extend a Fixed Term Contract.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS42.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Assignment Info -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Assignment Details</h5>
+      <p>Click the <strong>'Assignment'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS44.png" alt="Assignment Info Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>'Action'</strong> next to the relevant employee.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS45.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Effective Date</h5>
+      <p>Enter the <strong>effective date</strong for the change and click <strong>'Continue'</strong>. This ensures the update is correctly reflected in the employee’s record and employment history.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS46.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Select Change Reason -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Choose Change Reason</h5>
+      <p>Select <strong>'Extension of Fixed Term Contract'</strong> as the change reason.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS47.png" alt="Change Reason Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Confirm Assignment Category -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Verify Assignment Category</h5>
+      <p>In the <strong>Other Assignment Information</strong> section, ensure the category is set to <strong>'Fixed Term Temp'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS48.png" alt="Assignment Category Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 7: Enter New End Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 7: Set New End Date</h5>
+      <p>Enter the <strong>new fixed-term end date</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS49.png" alt="End Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 8: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 8: Finalise the Update</h5>
+      <p>Click <strong>'Next'</strong>, then <strong>'Submit'</strong>. The changes will be applied and visible to both employee and manager.</p>
+      <p>For policy guidance, visit <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === CAREER BREAK ============== -->
+    <!-- =============================== -->
+    <div id="MSS9" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Input a Career Break</h3>
+          </div>
+          <div class="col-md-8">
+             <h4>Input a Career Break</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a Fixed Term Contract can be extended. Further detail and support can be found on the Hub.</p>
+          <h5><b>Input a Career Break</b></h5>
+          <p>Managers can enter a career break for an employee.</p>
+          <p>Once you have confirmation that a Career Break has been approved, you should input it into ESR as soon as possible.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS50.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Assignment Info -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Assignment Details</h5>
+      <p>Click the <strong>'Assignment'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS52.png" alt="Assignment Info Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>'Action'</strong> next to the relevant employee.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS52.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Effective Date</h5>
+      <p>Enter the <strong>effective date</strong> for the career break and click <strong>'Continue'</strong>. This ensures the update is correctly reflected in the employee’s record and employment history.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS54.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Select Change Reason -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Choose Change Reason</h5>
+      <p>Select <strong>'Career Break'</strong> as the change reason.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS55.png" alt="Change Reason Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Update Status -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Set Status to Career Break</h5>
+      <p>Change the <strong>Status</strong> field to <strong>'Career Break'</strong>, then click <strong>'Next'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS56.png" alt="Status Update Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 7: Adjust Supervisor Hierarchy (if needed) -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 7: Review Supervisor Hierarchy</h5>
+      <p>If the career break affects reporting lines, update the <strong>Supervisor Hierarchy</strong> on the following screens.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS57.png" alt="Supervisor Hierarchy Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 8: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 8: Finalise the Update</h5>
+      <p>Click <strong>'Submit'</strong>. The changes will be applied and visible to both employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Additional Absence Types -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📄 For Other Absence Types</h5>
+      <p>For the following types of absence, a form must be completed and sent to HR Services:</p>
+      <ul>
+        <li>Maternity / Paternity / Adoption</li>
+        <li>Career Break (request)</li>
+        <li>Study Leave</li>
+      </ul>
+      <p>You can access the forms <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/ESR-Guidance.aspx" target="_blank">here</a>.</p>
+      <p>Further guidance on NHS England Policy is available <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">here</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === PAY PROGRESSION =========== -->
+    <!-- =============================== -->
+    <div id="MSS10" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Input a Pay Progression Meeting</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>Input a Pay Progression Meeting</h4>
+          <h5><b>Input a Pay Progression Meeting</b></h5>
+          <p>Managers can enter a career break for an employee.</p>
+          <p>Managers can input a Pay Progression Meeting in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS58.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Pay Progression Portlet -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Appraisal Management</h5>
+      <p>Click <strong>'Manage Appraisals'</strong> in the <em>My Team Pay Progression</em> portlet.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS60.png" alt="Manage Appraisals Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Create Standard Appraisal -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Start a New Appraisal</h5>
+      <p>Click <strong>'Go'</strong> next to <strong>'Create Standard Appraisal'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS61.png" alt="Create Appraisal Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Choose the Employee</h5>
+      <p>Click <strong>'Action'</strong> next to the relevant employee.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS62.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Fill in Appraisal Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Complete Appraisal Form</h5>
+      <ul>
+        <li>Select <strong>'Pay Progression'</strong> as the Review Type</li>
+        <li>Enter <strong>start and end dates</strong> for the review period</li>
+        <li>Choose the <strong>'Pay Progression Meeting'</strong> template</li>
+        <li>Enter the <strong>meeting date</strong> and click <strong>'Add Details'</strong></li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS63.png" alt="Appraisal Form Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Pay Progression Decision -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Record Outcome</h5>
+      <p>Select whether the individual should <strong>pay progress</strong>:</p>
+      <ul>
+        <li><strong>Yes</strong></li>
+        <li><strong>No</strong></li>
+        <li><strong>Yes Following Deferral</strong></li>
+      </ul>
+      <p>If <strong>No</strong>, select the reason(s) why not.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS64.png" alt="Pay Progression Decision Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 7: Save and Submit -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 7: Finalise the Appraisal</h5>
+      <p>Click <strong>'Save and Proceed'</strong>, then <strong>'Submit'</strong> and confirm with <strong>'Yes'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS66.png" alt="Submit Confirmation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 8: Confirmation -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>✅ Confirmation</h5>
+      <p>You’ll see a <strong>blue banner</strong> confirming the process is complete.</p>
+      <p>For policy guidance, visit <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS67.png" alt="Confirmation Banner Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === FLEXIBLE WORKING ========= -->
+    <!-- =============================== -->
+    <div id="MSS12" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Respond to Flexible Working Request</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to Respond to Flexible Working Request</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a Fixed Term Contract can be extended. Further detail and support can be found on the Hub.</p>
+          <h5><b>Responding to Flexible Working Requests</b></h5>
+          <p>Managers can respond to a flexible working request.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS77.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Flexible Working Requests -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Flexible Working Queue</h5>
+      <p>Click the <strong>'Flexible Working'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS79.png" alt="Flexible Working Link Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Request -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Request</h5>
+      <p>Find the relevant <strong>open request</strong> from the queue and click <strong>'Update Request'</strong>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS80.png" alt="Request Queue Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Update Outcome -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Record the Outcome</h5>
+      <p>On the update screen, enter the <strong>agreed outcome</strong> and click <strong>'Submit'</strong>.</p>
+      <ul>
+        <li>The employee will receive a notification with the details</li>
+        <li>If the outcome includes changes to hours, location, or working pattern, follow the relevant ESR update guide</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS81.png" alt="Update Request Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Section: Policy Guidance -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📚 Policy Support</h5>
+      <p>For further guidance on NHS England policies, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === TERMINATE STAFF =========== -->
+    <!-- =============================== -->
+    <div id="MSS13" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Terminate a Member of Staff</h3>
+          </div>
+          <div class="col-md-8">
+             <h4>How to Terminate a Member of Staff</h4>
+          <h5><b>Terminating Staff with only one job.</b></h5>
+          <p>Managers can terminate staff in ESR.</p>
+          <p>Once an Employee informs a manager of their intention to leave, the manager should enter the termination into ESR.</p>
+          </div>
+        </div>
+        <h5><b>Terminating a Primary Assignment</b></h5>
+          <p>Managers can end one of multiple jobs done by an employee in ESR.</p>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS82.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access End Employment -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open End Employment</h5>
+      <p>Click the <strong>'End Employment'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS84.png" alt="End Employment Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee and Complete Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Record Termination Details</h5>
+      <ul>
+        <li>Click <strong>'Action'</strong> next to the relevant employee</li>
+        <li>Enter <strong>termination date</strong>, <strong>notification date</strong>, <strong>reason</strong>, and <strong>destination on leaving</strong></li>
+        <li>Click <strong>'Next'</strong>, then <strong>'Submit'</strong></li>
+      </ul>
+      <p>Changes will be visible to both employee and manager.</p>
+      <p>Don’t forget to complete any additional leaver activities (e.g. equipment return, pass collection). These are listed on the Hub.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS88.png" alt="Submit Confirmation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+<h5><b>Terminating a Non-Primary Assignment</b></h5>
+          <p>Managers can end one of multiple jobs done by an employee in ESR.</p>
+<div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS89.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access End Non-Primary Assignment -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open End Non-Primary Assignment</h5>
+      <p>Click the <strong>'End Non Primary Assignment'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS91.png" alt="End Non Primary Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee and Complete Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Record Assignment End</h5>
+      <ul>
+        <li>Click <strong>'Action'</strong> next to the relevant employee</li>
+        <li>Select the <strong>effective date</strong> for the change</li>
+        <li>Complete all relevant fields</li>
+        <li>Click <strong>'Next'</strong>, then <strong>'Submit'</strong></li>
+      </ul>
+      <p>Changes will be visible to both employee and manager.</p>
+      <p>Additional leaver activities may apply—check the Hub for guidance.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS95.png" alt="Submit Confirmation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Section: Policy Guidance -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📚 Policy Support</h5>
+      <p>For further guidance on NHS England policies, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UPDATE OFFICE LOCATION ==== -->
+    <!-- =============================== -->
+    <div id="MSS14" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Update Staff Member's Office Location</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to Update a Staff Members Office Location</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a Fixed Term Contract can be extended. Further detail and support can be found on the Hub.</p>
+          <h5><b>Updating Office Location</b></h5>
+          <p>Managers can update office locations for staff in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS96.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Assignment Info -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Assignment Details</h5>
+      <p>Click the <strong>'Assignment'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS98.png" alt="Assignment Info Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>'Action'</strong> next to the relevant employee.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS99.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Effective Date</h5>
+      <p>Enter the <strong>effective date</strong> for the location change and click <strong>'Continue'</strong>.</p>
+      <p>Using a specific date ensures accuracy in the employee’s record and employment history.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS100.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Update Location -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Select New Base Location</h5>
+      <p>In the <strong>'Location'</strong> section, use the search function to find the new base location.</p>
+      <p>Click <strong>'Quick Select'</strong> to confirm the correct location.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS101.png" alt="Location Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>✅ Finalise the Update</h5>
+      <p>Click <strong>'Submit'</strong>. The change will be applied and visible to both employee and manager.</p>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UPDATE WORKING PATTERN ==== -->
+    <!-- =============================== -->
+    <div id="MSS15" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Update Staff Member's Working Pattern</h3>
+          </div>
+          <div class="col-md-8">
+              <h4>How to Update a Staff Members Working Pattern</h4>
+          <h5><b>Establishment Control</b></h5>
+          <p>Prior to accessing ESR, Managers must have approval from the Establishment Control Panels that a Fixed Term Contract can be extended. Further detail and support can be found on the Hub.</p>
+          <h5><b>Updating Working Pattern</b></h5>
+          <p>As a manager you are able to update an Employee's working pattern.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS102.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Hours Section -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Hours Management</h5>
+      <p>Click the <strong>'Hours'</strong> link in the <em>My Team Assignment Information</em> area on the left.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS104.png" alt="Hours Link Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Click <strong>'Action'</strong> next to the relevant employee.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS105.png" alt="Employee Selection Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Set Effective Date -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Input Effective Date</h5>
+      <p>Enter the <strong>effective date</strong> for the change and click <strong>'Continue'</strong>.</p>
+      <p>Using a specific date ensures accuracy in the employee’s record and employment history.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS106.png" alt="Effective Date Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Enter New Working Pattern -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 5: Update Working Pattern</h5>
+      <p>Enter the <strong>new working pattern</strong> details.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS107.png" alt="Working Pattern Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 6: Add Reason and Submit -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 6: Finalise the Update</h5>
+      <p>Select the <strong>reason for the change</strong> from the dropdown list.</p>
+      <p>Click <strong>'Submit'</strong>. The change will be applied and visible to both employee and manager.</p>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS108.png" alt="Submit Confirmation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === UPDATE PERSONAL INFO ====== -->
+    <!-- =============================== -->
+    <div id="MSS16" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">Update Staff Personal Information</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to Update Staff Personal Information</h4>
+          <h5><b>Updating Staff Personal Information</b></h5>
+          <p>Managers can update Staff personal information on behalf of their team.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS109.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Personal Info or Contacts -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Personal Information</h5>
+      <p>From the <strong>My Team Personal Information</strong> section in the left-hand navigation, select either:</p>
+      <ul>
+        <li><strong>Personal Information</strong> – for address, phone, or name updates</li>
+        <li><strong>Contacts</strong> – for emergency contact details</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS111.png" alt="Personal Info Navigation Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Enter Details -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Update the Information</h5>
+      <p>Enter the required details in the relevant fields. This may include:</p>
+      <ul>
+        <li>New address or phone number</li>
+        <li>Updated emergency contact name and number</li>
+        <li>Corrections to personal identifiers</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS112.png" alt="Update Details Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>✅ Finalise the Update</h5>
+      <p>Click <strong>'Submit'</strong>. The changes will be applied and visible to both employee and manager.</p>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW ORG CHART ============ -->
+    <!-- =============================== -->
+    <div id="MSS17" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Organisation Chart</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to View My Organisation Chart</h4>
+          <h5><b>View Organisation Chart</b></h5>
+          <p>Managers can view their Organisation Chart in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS113.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Launch Organisation Chart -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open the Organisation Chart</h5>
+      <p>In the <strong>Organisation Chart</strong> portlet, click the <strong>'Launch Organisation Chart'</strong> button.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS115.png" alt="Organisation Chart Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Explore and Amend -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Review and Update Reporting Lines</h5>
+      <ul>
+        <li>Expand the chart to view staff reporting to your direct reports</li>
+        <li>If any information is incorrect, you can make amendments</li>
+      </ul>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW TEAM ABSENCE ========= -->
+    <!-- =============================== -->
+    <div id="MSS18" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Team's Absence</h3>
+          </div>
+          <div class="col-md-8">
+                      <h4>How to View My Teams Absence</h4>
+          <h5><b>View Team Absence</b></h5>
+          <p>Managers can view their team Absence in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS116.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Team Absence Portlet -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open the Absence Overview</h5>
+      <p>Click on the <strong>'Team Absence'</strong> portlet to view your team's absence data.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS118.png" alt="Team Absence Portlet Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Explore Reporting Options -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: View and Manage Absence Data</h5>
+      <ul>
+        <li>Click the <strong>gauge icon</strong> to access ESR’s reporting area and view detailed absence data</li>
+        <li>Click <strong>'Manage Absence'</strong> to see a list view of individual team absences</li>
+        <li>Absence types are <strong>colour-coded</strong> for quick reference</li>
+      </ul>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS119.png" alt="Absence Reporting Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- === VIEW TRAINING COMPLIANCE == -->
+    <!-- =============================== -->
+    <div id="MSS19" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">View My Team's Training Compliance</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to View My Teams Training Compliance</h4>
+          <h5><b>View Team Compliance</b></h5>
+          <p>Managers can view their teams compliance in ESR.</p>
+          </div>
+        </div>
+        <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS120.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Team Compliance Portlet -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Compliance Overview</h5>
+      <p>Click on the <strong>'Team Compliance'</strong> portlet to view your team's training and competency status.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS122.png" alt="Team Compliance Portlet Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Explore Reporting Options -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: View and Manage Compliance Data</h5>
+      <ul>
+        <li>Click the <strong>gauge icon</strong> to access ESR’s reporting area and view detailed compliance data</li>
+        <li>Click <strong>'Manage Compliance'</strong> to see a list view of individual team members’ compliance status</li>
+      </ul>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS123.png" alt="Compliance Reporting Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Drill Down by Staff Member -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Review Individual Competencies</h5>
+      <p>Click on a team member’s name to drill down and view which <strong>competencies</strong> they still need to complete.</p>
+      <p>Use this view to support reminders, development planning, or escalation where needed.</p>
+      <p>For policy guidance, visit the <a href="https://nhsengland.sharepoint.com/sites/HRandOD/SitePages/HR-Support-A-Z.aspx" target="_blank">HR Support A–Z</a>.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS124.png" alt="Competency Breakdown Screenshot" class="img-fluid" />
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    
+        <!-- =============================== -->
+    <!-- === How to Log Disability Leave in ESR == -->
+    <!-- =============================== -->
+    <div id="MSS20" class="page">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 gradient-col d-flex align-items-center justify-content-center"
+          >
+            <h3 class="gradient-text">How to Log Disability Leave in ESR</h3>
+          </div>
+          <div class="col-md-8">
+            <h4>How to Log Disability Leave in ESR</h4>
+          <p>Managers can Log Disability Leave for an employee.</p>
+          </div>
+        </div>
+  <div class="container">
+  <!-- Step 1: Log in and Access Manager Tab -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h4>Step 1: Log into ESR</h4>
+      <p>Once logged in, you'll land on the <strong>Employee Dashboard</strong>.</p>
+      <p>Click the <strong>Manager Tab</strong> at the top of the screen to access team management tools.</p>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS125.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 2: Access Team Absence -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 2: Open Manage Absence</h5>
+      <p>Click on the <strong>Team Absence</strong> portlet, then select <strong>'Manage Absence'</strong>.</p>
+    </div>
+        <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS126.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 3: Select Employee -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 3: Choose the Employee</h5>
+      <p>Select the relevant employee from your team list.</p>
+    </div>
+        <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS127.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 4: Create Absence Entry -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>Step 4: Enter Absence Details</h5>
+      <ul>
+        <li>Under <strong>Create Absence</strong>, choose <strong>Special Increasing Balance</strong> as the Absence Type</li>
+        <li>Select <strong>Disability Leave</strong> as the Absence Reason</li>
+        <li>Enter the <strong>start date</strong> and <strong>end date</strong></li>
+        <li>Specify the duration in <strong>days or hours</strong> as appropriate</li>
+        <li>Set <strong>Disability Related</strong> to <code>Y</code></li>
+      </ul>
+    </div>
+        <div class="col-md-12 text-center">
+      <img src="Assets/NHSE_MSS128.png" alt="Manager Tab Screenshot" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Step 5: Submit and Confirm -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>✅ Finalise the Entry</h5>
+      <p>Click <strong>'Submit'</strong>. The absence will be logged and visible to both employee and manager.</p>
+    </div>
+  </div>
+
+  <!-- Additional Note: Disability-Related Sickness -->
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h5>📌 Note on Disability-Related Sickness</h5>
+      <p>If the absence is due to disability-related sickness, log it as <strong>standard sickness absence</strong> but:</p>
+      <ul>
+        <li>Include the relevant disability in the <strong>Level 2 Absence Reason</strong></li>
+        <li>Set <strong>Disability Related</strong> to <code>Yes</code></li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <!-- ================================= -->
+    <!-- ============ FOOTER ============= -->
+    <!-- ================================= -->
+    <footer class="text-center py-4 mt-5 border-top">
+      <p class="mb-0">&copy; 2025 NHSE. ESR Self Service.</p>
+    </footer>
+    <!-- ================================= -->
+    <!-- ====== JAVASCRIPT INCLUDES ====== -->
+    <!-- ================================= -->
+    <!-- Bootstrap 5 Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script File -->
+    <script src="script.js"></script>
+  </body>
 </html>
 
 <!-- 
