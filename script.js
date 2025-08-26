@@ -9,7 +9,7 @@ function showPage(pageId) {
 // Search input: filters pages + cards
 function searchPages(query) {
   query = query.toLowerCase();
-  const pages = document.querySelectorAll(".pagex");
+  const pages = document.querySelectorAll(".page");
   const homePage = document.getElementById("home");
 
   function showAllCards() {
